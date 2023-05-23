@@ -14,10 +14,6 @@ h1 {
   color: white;
 }
 
-body {
-  background-color: rgb(220, 239, 239);
-}
-
 nav {
   display: flex;
   padding: 1rem;
@@ -43,6 +39,10 @@ nav {
 
 nav a:last-child {
   border-right: none;
+}
+
+body {
+  background-color: rgb(220, 239, 239);
 }
 
 .speaker_section {

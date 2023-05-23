@@ -1,0 +1,27 @@
+nav{
+  display: flex;
+  padding: 1rem;
+  flex-direction: row;
+  align-items: end;
+  justify-content:center;
+  gap: 1rem;
+  border: solid  
+}
+
+
+  .logo{ 
+    border: solid 1px black;
+    //padding: 1rem;
+    align-self: flex-start;
+    margin-right: auto;
+    
+    }
+      .n0, .n1, .n2, .n3, .n4{
+        color: inherit;      
+        text-decoration: none;
+        border-right: 1px solid black;
+        padding: 1rem;
+}
+nav a:last-child {
+  border-right: none; 
+}
