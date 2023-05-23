@@ -1,27 +1,51 @@
 nav{
   display: flex;
   padding: 1rem;
+  flex-direction: column;
+    
+}
+.head_nav{
+  display: flex;
   flex-direction: row;
-  align-items: end;
+  align-items: center;
   justify-content:center;
   gap: 1rem;
-  border: solid  
 }
 
-
   .logo{ 
-    border: solid 1px black;
-    //padding: 1rem;
+    
+    padding: 1rem;
     align-self: flex-start;
     margin-right: auto;
+    width: 10%;
     
     }
-      .n0, .n1, .n2, .n3, .n4{
+
+  .n0, .n1, .n2, .n3, .n4{
         color: inherit;      
         text-decoration: none;
         border-right: 1px solid black;
         padding: 1rem;
 }
+
 nav a:last-child {
   border-right: none; 
+}
+
+.teaser__header{
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(68, 29, 145);
+}
+.teaser__header_text{
+  padding: 1rem;
+}
+
+.teaser__title{
+  color: white;
+  font-size: 3.5rem;
+}
+
+.teaser__picture{
+  position: relative;
 }
