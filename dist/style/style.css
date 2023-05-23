@@ -46,10 +46,18 @@ nav a:last-child {
   border-right: none;
 }
 
-.teaser__header {
+.teaser {
   display: flex;
   flex-direction: row;
   background-color: rgb(68, 29, 145);
+  justify-content: flex-end;
+  position: relative;
+}
+
+.teaser__header {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
 }
 
 .teaser__header_text {
@@ -58,11 +66,14 @@ nav a:last-child {
 
 .teaser__title {
   color: white;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
 }
 
 .teaser__picture {
-  position: relative;
+  width: 20%;
+  position: absolute;
+  top: -5rem;
+  left: 5rem;
 }
 
 body {
