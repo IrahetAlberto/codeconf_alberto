@@ -33,14 +33,16 @@ nav a:last-child {
 }
 
 
+.teaser{
+  background: rgb(96, 54, 195);
+ 
+}
 .teaser__header {
   display: grid;
-  //border: 1px solid #888;
   max-width: 80rem;
   margin: 0 auto;
 
-  background: rgb(96, 54, 195);
- 
+  
   .teaser__picture {
     position: relative;
     z-index: 2;

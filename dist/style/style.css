@@ -60,11 +60,14 @@ nav a:last-child::before {
   font-size: 1.5rem;
 }
 
+.teaser {
+  background: rgb(96, 54, 195);
+}
+
 .teaser__header {
   display: grid;
   max-width: 80rem;
   margin: 0 auto;
-  background: rgb(96, 54, 195);
 }
 .teaser__header .teaser__picture {
   position: relative;
