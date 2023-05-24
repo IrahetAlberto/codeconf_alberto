@@ -51,6 +51,12 @@ nav a:last-child::before {
   font-size: 1.5rem;
 }
 
+.n4 ::before {
+  content: "\e940";
+  font-family: icon;
+  font-size: 1.5rem;
+}
+
 .teaser {
   background-image: linear-gradient(to top, rgb(73, 5, 163), rgb(108, 33, 206)), linear-gradient(to bottom, rgb(73, 5, 163), rgb(108, 33, 206));
   background-position: top, bottom;
@@ -84,6 +90,19 @@ nav a:last-child::before {
   align-content: center;
 }
 
+.teaser__title {
+  font-family: maven;
+  font-variation-settings: "wght" 500;
+  color: antiquewhite;
+  font-size: 3rem;
+}
+
+.teaser__text {
+  font-family: maven;
+  color: white;
+  font-variation-settings: "wght" 100;
+}
+
 body {
   background-color: rgb(252, 253, 253);
 }
@@ -110,7 +129,6 @@ body {
 .speaker_card__topic_details,
 .speaker_card__time,
 .speaker_card__room {
-  border: 1px solid black;
   margin-inline: 1rem;
   font-family: maven;
 }/*# sourceMappingURL=style.css.map */
