@@ -35,7 +35,7 @@ nav a:last-child {
 .teaser{
   display: flex;
   flex-direction: row;
-  background-color: rgb(68, 29, 145);
+  background-color: rgb(116, 63, 223);
   justify-content: flex-end;
   position: relative;
   
@@ -51,10 +51,7 @@ nav a:last-child {
   padding: 1rem;
   
 }
-.teaser__title{
-  color: white;
-  font-size: 2.5rem;
-}
+
 
 .teaser__picture{
   width: 20%;

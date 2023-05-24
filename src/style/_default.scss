@@ -1,3 +1,9 @@
-p {
-  color: rgb(6, 29, 130);
+h1 {
+  font-family: maven;
+  font-variation-settings: 'wght'400;
+  color: white;
+  &::before{
+    content:"\e93f" ;
+    font-family: icon;
+  }
 }
