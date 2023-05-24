@@ -13,7 +13,7 @@
 .logo {
   min-width: 10rem;
   margin-inline-end: auto;
-  border: solid 1px blue;
+  
 }
 
   .n0, .n1, .n2, .n3, .n4,.n5{
@@ -34,8 +34,11 @@ nav a:last-child {
 
 
 .teaser{
-  background: rgb(96, 54, 195);
- 
+  
+  background-image: linear-gradient(to top, rgb(73, 5, 163), rgb(108, 33, 206)), linear-gradient(to bottom,rgb(73, 5, 163), rgb(108, 33, 206));
+  background-position: top, bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 50%; 
 }
 .teaser__header {
   display: grid;

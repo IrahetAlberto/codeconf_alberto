@@ -24,3 +24,16 @@ body
   width: 100%;
 }
 
+.speaker_card{
+  border: 1px solid black;
+}
+.speaker_card__name,
+.speaker_card__location, 
+.speaker_card__topic,
+.speaker_card__topic_details,
+.speaker_card__time,
+.speaker_card__room{
+  border: 1px solid black;
+  margin-inline: 1rem;
+  font-family: maven;
+}
