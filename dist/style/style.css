@@ -1,4 +1,3 @@
-@charset "UTF-8";
 div {
   border: solid black 1px;
 }
@@ -29,29 +28,23 @@ h2 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-nav {
-  display: flex;
-  padding: 1rem;
-  flex-direction: column;
-}
-
 .head_nav {
   display: flex;
   flex-direction: row;
+  gap: 2rem;
+  background: white;
+  z-index: 1;
+  position: relative;
   align-items: center;
-  justify-content: center;
-  gap: 1rem;
 }
 
 .logo {
-  border: solid black 1px;
-  padding: 1rem;
-  align-self: flex-start;
-  margin-right: auto;
-  width: 10%;
+  min-width: 10rem;
+  margin-inline-end: auto;
+  border: solid 1px blue;
 }
 
-.n0, .n1, .n2, .n3, .n4 {
+.n0, .n1, .n2, .n3, .n4, .n5 {
   color: inherit;
   text-decoration: none;
   border-right: 1px solid black;
@@ -67,59 +60,31 @@ nav a:last-child::before {
   font-size: 1.5rem;
 }
 
-.menu_burger {
-  display: none; /* Ocultamos inicialmente el menú burger */
-}
-
-/* Estilos para el botón del menú burger */
-.menu_burger_button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  cursor: pointer;
-}
-
-.menu_burger_button::before {
-  content: "\e940";
-  font-family: icon;
-  font-size: 1.5rem;
-}
-
-@media (max-width: 500px) {
-  .head_nav {
-    display: none; /* Ocultamos la barra de navegación en la versión móvil */
-  }
-  .menu_burger {
-    display: block; /* Mostramos el menú burger en la versión móvil */
-  }
-}
-.teaser {
-  display: flex;
-  flex-direction: row;
-  background-color: rgb(74, 38, 173);
-  justify-content: flex-end;
-  position: relative;
-}
 .teaser__header {
-  width: calc(50% - 3rem);
-  padding-right: 3rem;
+  display: grid;
+  max-width: 80rem;
+  margin: 0 auto;
+  background: rgb(96, 54, 195);
+}
+.teaser__header .teaser__picture {
+  position: relative;
+  z-index: 2;
+  margin-block-start: -3rem;
+  width: 100%;
+  grid-column: 3/6;
+  pointer-events: none;
+  align-self: end;
 }
 
-.teaser__header_text {
-  padding: 1rem;
+.teaser__header {
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
 }
-
-.teaser__picture {
-  max-width: 50%;
-  position: absolute;
-  inset-block-end: 0rem;
-  inset-inline-end: 50%;
-}
-@media (min-width: 48rem) {
-  .teaser__picture {
-    max-width: 25%;
-  }
+.teaser__group_text {
+  grid-column: 6/11;
+  display: grid;
+  align-content: center;
 }
 
 body {

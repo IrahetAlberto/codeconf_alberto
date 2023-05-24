@@ -1,27 +1,22 @@
-nav{
-  display: flex;
-  padding: 1rem;
-  flex-direction: column;
-    
-}
-.head_nav{
+
+.head_nav {
   display: flex;
   flex-direction: row;
+  gap: 2rem;
+  background: white;
+  z-index: 1;
+  position: relative;
   align-items: center;
-  justify-content:center;
-  gap: 1rem;
 }
 
-  .logo{ 
-    border: solid black 1px;
-    padding: 1rem;
-    align-self: flex-start;
-    margin-right: auto;
-    width: 10%;
-    
-    }
 
-  .n0, .n1, .n2, .n3, .n4{
+.logo {
+  min-width: 10rem;
+  margin-inline-end: auto;
+  border: solid 1px blue;
+}
+
+  .n0, .n1, .n2, .n3, .n4,.n5{
         color: inherit;      
         text-decoration: none;
         border-right: 1px solid black;
@@ -37,64 +32,40 @@ nav a:last-child {
   } 
 }
 
-.menu_burger {
-  display: none; /* Ocultamos inicialmente el menú burger */
-}
 
-/* Estilos para el botón del menú burger */
-.menu_burger_button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  cursor: pointer;
-}
+.teaser__header {
+  display: grid;
+  //border: 1px solid #888;
+  max-width: 80rem;
+  margin: 0 auto;
 
-.menu_burger_button::before {
-  content: "\e940";
-  font-family: icon;
-  font-size: 1.5rem;
-}
-
-@media (max-width: 500px) {
-  .head_nav {
-    display: none; /* Ocultamos la barra de navegación en la versión móvil */
+  background: rgb(96, 54, 195);
+ 
+  .teaser__picture {
+    position: relative;
+    z-index: 2;
+    margin-block-start: -3rem;
+    width: 100%;
+    grid-column: 3/6;
+    pointer-events: none;
+    align-self: end;
   }
 
-  .menu_burger {
-    display: block; /* Mostramos el menú burger en la versión móvil */
+
+}
+
+
+
+
+.teaser {
+  &__header {
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
   }
-}
-
-
-.teaser{
-  display: flex;
-  flex-direction: row;
-  background-color: rgb(74, 38, 173);
-  justify-content: flex-end;
-  position: relative;
-  @media (min-width: 48rem){
-
-  }
-}
-
-.teaser__header{
-  width: calc(50% - 3rem);
-  padding-right: 3rem;
-}
-.teaser__header_text{
-  padding: 1rem;
-  
-}
-
-
-.teaser__picture{
-  max-width: 50%;
-  position: absolute;
-  inset-block-end: 0rem;
-  inset-inline-end: calc(50%);
-  @media (min-width: 48rem){
-    max-width: 25%;
-    
+  &__group_text {
+    grid-column: 6/11;
+    display: grid;
+    align-content: center;
   }
 }
