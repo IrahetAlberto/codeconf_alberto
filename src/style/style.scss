@@ -14,7 +14,7 @@ body
 
 .speaker_section{
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Tres columnas con ancho flexible */
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); /* Tres columnas con ancho flexible */
   grid-gap: 40px;
   padding: 5rem;
   margin-top: 5rem;

@@ -1,19 +1,34 @@
+@charset "UTF-8";
 div {
   border: solid black 1px;
 }
 
-p {
-  color: rgb(6, 29, 130);
+h1 {
+  font-family: maven;
+  font-variation-settings: "wght" 400;
+  color: rgb(91, 33, 33);
+}
+h1::before {
+  content: "\e93f";
+  font-family: icon;
 }
 
 h2 {
   color: rgb(157, 34, 34);
 }
 
-h1 {
-  color: white;
+@font-face {
+  font-family: maven;
+  src: url("/src/style/webfonts/MavenPro-VariableFont_wght.ttf") format("truetype-variations");
+  font-variation-settings: "wght" 400, "wght" 900;
 }
-
+@font-face {
+  font-family: icon;
+  src: url("/src/style/webfonts/codeconf.ttf") format("woff");
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 nav {
   display: flex;
   padding: 1rem;
@@ -29,6 +44,7 @@ nav {
 }
 
 .logo {
+  border: solid black 1px;
   padding: 1rem;
   align-self: flex-start;
   margin-right: auto;
@@ -45,35 +61,65 @@ nav {
 nav a:last-child {
   border-right: none;
 }
+nav a:last-child::before {
+  content: "\e940";
+  font-family: icon;
+  font-size: 1.5rem;
+}
 
+.menu_burger {
+  display: none; /* Ocultamos inicialmente el menú burger */
+}
+
+/* Estilos para el botón del menú burger */
+.menu_burger_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.menu_burger_button::before {
+  content: "\e940";
+  font-family: icon;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 500px) {
+  .head_nav {
+    display: none; /* Ocultamos la barra de navegación en la versión móvil */
+  }
+  .menu_burger {
+    display: block; /* Mostramos el menú burger en la versión móvil */
+  }
+}
 .teaser {
   display: flex;
   flex-direction: row;
-  background-color: rgb(68, 29, 145);
+  background-color: rgb(74, 38, 173);
   justify-content: flex-end;
   position: relative;
 }
-
 .teaser__header {
-  display: flex;
-  flex-direction: column;
-  align-self: flex-start;
+  width: calc(50% - 3rem);
+  padding-right: 3rem;
 }
 
 .teaser__header_text {
   padding: 1rem;
 }
 
-.teaser__title {
-  color: white;
-  font-size: 2.5rem;
-}
-
 .teaser__picture {
-  width: 20%;
+  max-width: 50%;
   position: absolute;
-  top: -5rem;
-  left: 5rem;
+  inset-block-end: 0rem;
+  inset-inline-end: 50%;
+}
+@media (min-width: 48rem) {
+  .teaser__picture {
+    max-width: 25%;
+  }
 }
 
 body {
@@ -82,7 +128,7 @@ body {
 
 .speaker_section {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Tres columnas con ancho flexible */
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); /* Tres columnas con ancho flexible */
   grid-gap: 40px;
   padding: 5rem;
   margin-top: 5rem;

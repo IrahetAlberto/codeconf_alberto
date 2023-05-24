@@ -13,7 +13,7 @@ nav{
 }
 
   .logo{ 
-    
+    border: solid black 1px;
     padding: 1rem;
     align-self: flex-start;
     margin-right: auto;
@@ -30,22 +30,57 @@ nav{
 
 nav a:last-child {
   border-right: none; 
+  &::before{
+    content:"\e940" ;
+    font-family: icon;
+    font-size: 1.5rem;
+  } 
 }
+
+.menu_burger {
+  display: none; /* Ocultamos inicialmente el menú burger */
+}
+
+/* Estilos para el botón del menú burger */
+.menu_burger_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.menu_burger_button::before {
+  content: "\e940";
+  font-family: icon;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 500px) {
+  .head_nav {
+    display: none; /* Ocultamos la barra de navegación en la versión móvil */
+  }
+
+  .menu_burger {
+    display: block; /* Mostramos el menú burger en la versión móvil */
+  }
+}
+
 
 .teaser{
   display: flex;
   flex-direction: row;
-  background-color: rgb(116, 63, 223);
+  background-color: rgb(74, 38, 173);
   justify-content: flex-end;
   position: relative;
-  
+  @media (min-width: 48rem){
+
+  }
 }
 
 .teaser__header{
-  display: flex;
-  flex-direction: column;
-  align-self: flex-start;
-
+  width: calc(50% - 3rem);
+  padding-right: 3rem;
 }
 .teaser__header_text{
   padding: 1rem;
@@ -54,8 +89,12 @@ nav a:last-child {
 
 
 .teaser__picture{
-  width: 20%;
+  max-width: 50%;
   position: absolute;
-  top: -5rem;
-  left: 5rem;
+  inset-block-end: 0rem;
+  inset-inline-end: calc(50%);
+  @media (min-width: 48rem){
+    max-width: 25%;
+    
+  }
 }
