@@ -11,3 +11,21 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+@font-face {
+  font-family: museo;
+  src: url(/src/style/webfonts/museo/museo300.woff) format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: museo5;
+  src: url(/src/style/webfonts/museo/museo500.woff) format("woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: museo7;
+  src: url(/src/style/webfonts/museo/museo700.woff) format("woff");
+  font-weight: normal;
+}

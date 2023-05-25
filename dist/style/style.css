@@ -20,6 +20,21 @@ h1::before {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@font-face {
+  font-family: museo;
+  src: url(/src/style/webfonts/museo/museo300.woff) format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: museo5;
+  src: url(/src/style/webfonts/museo/museo500.woff) format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: museo7;
+  src: url(/src/style/webfonts/museo/museo700.woff) format("woff");
+  font-weight: normal;
+}
 .head_nav {
   display: flex;
   flex-direction: row;
@@ -32,7 +47,8 @@ h1::before {
 
 .logo {
   min-width: 10rem;
-  margin-inline-end: auto;
+  -webkit-margin-end: auto;
+          margin-inline-end: auto;
 }
 
 .n0, .n1, .n2, .n3, .n4, .n5 {
@@ -52,7 +68,7 @@ nav a:last-child::before {
 }
 
 .n4::before {
-  content: "\e940";
+  content: "\e93f";
   font-family: icon;
   font-size: 1.5rem;
 }
@@ -72,7 +88,8 @@ nav a:last-child::before {
 .teaser__header .teaser__picture {
   position: relative;
   z-index: 2;
-  margin-block-start: -3rem;
+  -webkit-margin-before: -3rem;
+          margin-block-start: -3rem;
   width: 100%;
   grid-column: 3/6;
   pointer-events: none;
@@ -91,9 +108,8 @@ nav a:last-child::before {
 }
 
 .teaser__title {
-  font-family: maven;
-  font-variation-settings: "wght" 500;
-  color: antiquewhite;
+  font-family: museo7;
+  color: rgb(243, 240, 235);
   font-size: 3rem;
 }
 
@@ -120,7 +136,7 @@ body {
 }
 
 .speaker_card {
-  border: 1px solid black;
+  border: 1px solid rgb(219, 69, 69);
 }
 
 .speaker_card__name,

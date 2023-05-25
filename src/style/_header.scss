@@ -65,7 +65,6 @@ nav a:last-child {
 
 }
 
-
 .teaser {
   &__header {
     gap: 1rem;
@@ -80,9 +79,8 @@ nav a:last-child {
 }
 
 .teaser__title{
-  font-family: maven;
-  font-variation-settings: 'wght'500;
-  color: antiquewhite;
+  font-family: museo7;
+  color: rgb(243, 240, 235);
   font-size: 3rem;
 }
 
