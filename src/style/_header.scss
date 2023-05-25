@@ -79,13 +79,15 @@ nav a:last-child {
 }
 
 .teaser__title{
-  font-family: museo7;
-  color: rgb(243, 240, 235);
+  font-family: museobold;
+  color: rgb(243, 242, 239);
   font-size: 3rem;
+  margin: 0;
+  padding: 0;
 }
 
 .teaser__text{
   font-family: maven;
   color: white;
-  font-variation-settings: 'wght'100;
+  font-weight: 100;
 }

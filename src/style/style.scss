@@ -37,3 +37,13 @@ body
   margin-inline: 1rem;
   font-family: maven;
 }
+
+.body_head__title{
+  font-family: maven;
+  font-variation-settings: 'wght'400;
+  color: rgb(117, 93, 93);
+  &::before{
+    content:"\e943" ;
+    font-family: icon;
+  }
+}

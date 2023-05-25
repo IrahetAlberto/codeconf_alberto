@@ -1,39 +1,27 @@
-h1 {
-  font-family: maven;
-  font-variation-settings: "wght" 400;
-  color: rgb(91, 33, 33);
-}
-h1::before {
-  content: "\e93f";
-  font-family: icon;
-}
-
 @font-face {
   font-family: maven;
-  src: url("/src/style/webfonts/MavenPro-VariableFont_wght.ttf") format("truetype-variations");
+  src: url(/dist/style/webfonts/MavenPro-VariableFont_wght.ttf) format("truetype-variations");
   font-variation-settings: "wght" 400, "wght" 900;
 }
 @font-face {
   font-family: icon;
-  src: url("/src/style/webfonts/codeconf.ttf") format("woff");
+  src: url("/dist/style/webfonts/codeconf.ttf") format("woff");
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 @font-face {
   font-family: museo;
-  src: url(/src/style/webfonts/museo/museo300.woff) format("woff");
-  font-weight: normal;
+  src: url("/dist/style/webfonts/museo/museo300.woff") format("woff");
 }
 @font-face {
   font-family: museo5;
-  src: url(/src/style/webfonts/museo/museo500.woff) format("woff");
+  src: url("/dist/style/webfonts/museo/museo500.woff") format("woff");
   font-weight: normal;
 }
 @font-face {
-  font-family: museo7;
-  src: url(/src/style/webfonts/museo/museo700.woff) format("woff");
-  font-weight: normal;
+  font-family: museobold;
+  src: url(/dist/style/webfonts/museo/museo700.woff) format("woff");
 }
 .head_nav {
   display: flex;
@@ -108,15 +96,17 @@ nav a:last-child::before {
 }
 
 .teaser__title {
-  font-family: museo7;
-  color: rgb(243, 240, 235);
+  font-family: museobold;
+  color: rgb(243, 242, 239);
   font-size: 3rem;
+  margin: 0;
+  padding: 0;
 }
 
 .teaser__text {
   font-family: maven;
   color: white;
-  font-variation-settings: "wght" 100;
+  font-weight: 100;
 }
 
 body {
@@ -147,4 +137,14 @@ body {
 .speaker_card__room {
   margin-inline: 1rem;
   font-family: maven;
+}
+
+.body_head__title {
+  font-family: maven;
+  font-variation-settings: "wght" 400;
+  color: rgb(117, 93, 93);
+}
+.body_head__title::before {
+  content: "\e943";
+  font-family: icon;
 }/*# sourceMappingURL=style.css.map */
