@@ -126,10 +126,13 @@ body {
 }
 
 .speaker_card {
-  background-color: aqua;
   position: relative;
   transition: all 500ms cubic-bezier(0.1, 0.7, 1, 0.1);
   transform-style: preserve-3d;
+  background-color: aqua;
+}
+.speaker_card:hover .card_flip {
+  transform: rotate(-180deg);
 }
 
 .card_front, .card_back {
@@ -144,7 +147,7 @@ body {
 
 .card_back {
   background-color: rgb(43, 139, 115);
-  transform: rotateY("-180deg");
+  transform: rotateY(180deg);
 }
 
 .speaker_card__name,

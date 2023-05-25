@@ -22,18 +22,19 @@ body
   margin-top: 5rem;
   
 }
-
 .speaker_card__picture{
   width: 100%;
 }
 
+
 .speaker_card{
-  
-    background-color: aqua;
-    position:relative;
-    transition: all 500ms $c-bezier ;
-    transform-style: preserve-3d;
-    
+  position:relative;
+  transition: all 500ms $c-bezier ;
+  transform-style: preserve-3d;
+  background-color: aqua;
+    &:hover .card_flip{
+    transform: rotate(-180deg);
+   }   
 }
 .card_front, .card_back{
   position: absolute;
@@ -46,8 +47,10 @@ body
 }
 .card_back{
   background-color: rgb(43, 139, 115);
-  transform: rotateY('-180deg');
+  transform: rotateY(180deg);
 }
+
+
 
 .speaker_card__name,
 .speaker_card__location,
