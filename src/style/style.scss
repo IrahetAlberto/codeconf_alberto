@@ -8,13 +8,12 @@
 body
 {
   background-color: rgb(252, 253, 253);
-
 }
 
 
 .speaker_section{
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Tres columnas con ancho flexible */
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); /* Tres columnas con ancho flexible */
   grid-gap: 40px;
   padding: 5rem;
   margin-top: 5rem;
@@ -25,3 +24,16 @@ body
   width: 100%;
 }
 
+.speaker_card{
+  border: 1px solid black;
+}
+.speaker_card__name,
+.speaker_card__location, 
+.speaker_card__topic,
+.speaker_card__topic_details,
+.speaker_card__time,
+.speaker_card__room{
+ 
+  margin-inline: 1rem;
+  font-family: maven;
+}
