@@ -1,12 +1,12 @@
 @font-face { // esta es para agregar un tipo de letra
   font-family: maven;
-  src: url("/src/style/webfonts/MavenPro-VariableFont_wght.ttf") format("truetype-variations");
+  src: url("/dist/style/webfonts/MavenPro-VariableFont_wght.ttf") format("truetype-variations");
   font-variation-settings: 'wght'400, 'wght'900;
 }
 
 @font-face { // esta es para agregar los iconos, son un tipo de letra tambien
   font-family: icon;
-  src: url("/src/style/webfonts/codeconf.ttf") format("woff");
+  src: url("/dist/style/webfonts/codeconf.ttf") format("woff");
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -14,18 +14,18 @@
 
 @font-face {
   font-family: museo;
-  src: url(/src/style/webfonts/museo/museo300.woff) format("woff");
-  font-weight: normal;
+  src: url("/dist/style/webfonts/museo/museo300.woff") format("woff");
+  
 }
 
 @font-face {
   font-family: museo5;
-  src: url(/src/style/webfonts/museo/museo500.woff) format("woff");
+  src: url("/dist/style/webfonts/museo/museo500.woff") format("woff");
   font-weight: normal;
 }
 
 @font-face {
   font-family: museo7;
-  src: url(/src/style/webfonts/museo/museo700.woff) format("woff");
-  font-weight: normal;
+  src: url("/dist/style/webfonts/museo/museo700.woff") format("woff");
+  
 }
