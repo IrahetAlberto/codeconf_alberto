@@ -355,6 +355,22 @@ nav a:last-child::before {
   }
 }
 
+.speaker_card-active .speaker_cardcard_back {
+  display: grid;
+}
+.speaker_card-active .speaker_cardspeaker_card__name {
+  display: flex;
+  align-items: center;
+  grid-row: span 2;
+}
+.speaker_card-active .speaker_cardspeaker_card__name strong {
+  -webkit-margin-start: 0.3rem;
+          margin-inline-start: 0.3rem;
+}
+.speaker_card-active .speaker_cardspeaker_footer {
+  display: flex;
+}
+
 .card_front {
   background-color: purple;
 }

@@ -253,6 +253,26 @@
   }
 }
 
+//// testing class active
+
+.speaker_card-active {
+  .speaker_card {
+    &card_back {
+      display: grid;
+    }
+    &speaker_card__name {
+      display: flex;
+      align-items: center;
+      grid-row: span 2;
+      strong {
+        margin-inline-start: .3rem;
+      }
+    }
+    &speaker_footer {
+      display: flex;
+    }
+  } 
+}
 
 
 .card_front{
