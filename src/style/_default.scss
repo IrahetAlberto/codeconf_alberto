@@ -1,1 +1,100 @@
+@import "_webfonts.scss";
 
+.form_section {
+    padding: 2rem;
+    border: solid 1px blue;
+ 
+  
+  form {
+    font-family: museo;
+    border: solid 1px brown;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  h2{
+    color: rgb(127, 108, 158);
+    font-family: museobold;
+  }
+
+  h2, h3, p {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .form_field {
+    margin-bottom: 1.5rem;
+  }
+  
+  .floating_label {
+    display: block;
+    margin-bottom: 0.5rem;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    border-color: #333;
+  }
+  
+  input[type="text"]:focus + .floating_label,
+  input[type="email"]:focus + .floating_label,
+  textarea:focus + .floating_label,
+  input[type="text"]:valid + .floating_label,
+  input[type="email"]:valid + .floating_label,
+  textarea:valid + .floating_label {
+    opacity: 1;
+  }
+  
+  input[type="submit"] {
+    display: block;
+    margin: 1rem auto;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .last_title {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .form_datapers {
+    border: solid 1px rgb(151, 42, 165);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem;
+  }
+  
+  .form_field {
+    position: relative;
+  }
+  
+  .form_field > label {
+    position: absolute;
+    top: -1.2rem;
+    left: 0;
+    font-size: 0.8rem;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+  }
+  
+  textarea {
+    grid-column: span 2;
+    height: 120px;
+  }
+}

@@ -238,33 +238,38 @@
 
     </div>
 
-
-<section class="form_section">
-  <form>
-    <h2>BECOME SPEAKER</h2>
-    <h3>Do you have a topic that you like?</h3>
-    <p> Submit it for the next event by filling out the form below. Do not forget to specify the subject and the related keywords</p>
- <label for="nombre">Nombre:</label>
-    <input type="text" placeholder="Name*">
-
-    <label for="mail">Mail*:</label>
-    <input type="text" label="" placeholder="Mail*">
-
-    <label for="Your_subject">Your Subject*:</label>
-    <input type="text" placeholder="Your Subject*:">
-
-    <label for="Keywords">Keywords*[separate by comma]:</label>
-    <input type="text" placeholder="Keywords*[separate by comma]:">
-
-    <label for="textblock">Short details*</label>
-    <input type="text" placeholder="Your Subject*:">
-
+    <section class="form_section">
+      <form>
+        <h2>BECOME SPEAKER</h2>
+        <h3>Do you have a topic that you like?</h3>
+        <p>Submit it for the next event by filling out the form below. Do not forget to specify the subject and the related keywords.</p>
+       <div class="form_datapers">
+        <div class="form_field">
+          <label class="floating_label">Name*</label>
+          <input type="text" placeholder="Name*" required>
+        </div>
+        <div class="form_field">
+          <label class="floating_label">Mail*</label>
+          <input type="email" placeholder="Mail*" required>
+        </div>
+        <div class="form_field">
+          <label class="floating_label">Your Subject*</label>
+          <input type="text" placeholder="Your Subject*" required>
+        </div>
+        <div class="form_field">
+          <label class="floating_label">Keywords*[separate by comma]</label>
+          <input type="text" placeholder="" required>
+        </div>
+       </div>
+        <div class="form_field">
+          <label class="floating_label">Short details*</label>
+          <textarea placeholder="" required></textarea>
+        </div>
+        <input type="submit" value="Submit">
+      </form>
+      <h2 class="last_title">Or just participate in the present event...</h2>
+    </section>
     
-    <input type="button">
-  </form>
-<h2 class="last_title"> or just participate to the present event...</h2>
-
-</section>
 
 
 
