@@ -5,6 +5,17 @@
 @import "_header.scss";
 @media screen and  (max-width: 768px){};
 
+@mixin box-sizing($box-model:border-box) {
+  box-sizing: $box-model;
+}
+
+*, 
+*::before,
+*::after {
+@include box-sizing();
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
 
 .speaker_section {
   border: 1px solid rgb(201, 140, 26);
@@ -34,7 +45,7 @@
      background-color: aqua;
      border: solid 1px black;
    
-     font-family: 'maven pro', serif;
+     font-family: 'maven', serif;
      padding: 1rem;
      color: #000d;
      border-radius: .5rem;
@@ -51,28 +62,7 @@
        &:not(.speaker_card-active){
          .speaker_card{
           
-           &.speaker_card__picture{
-               display: grid;
-               grid-template: 1fr / 1fr;
-               justify-items: center;
-               align-items: center;
-               &::before{
-                 transition: all .3s;
-                 content: "more info";
-                 display: grid;
-                 grid-template-columns: 3rem;
-                 text-align: center;
-                 color: white;
-                 align-content: center;
-                 justify-content:center;
-                 width: var(--w-circle);
-                 height: var(--w-circle);
-                 border-radius: var(--w-circle);
-               box-shadow: 0 0 0 1rem var(--primaryB);
-               background: var(--primaryA);
-               z-index: 1;
-               opacity: 0;
-               }
+    
    
                img, &::before{
                  grid-area: 1/1/-1/-1;
@@ -84,6 +74,34 @@
         } 
        }    
    }
+   .speaker_card__picture{
+    width: 100%;
+    display: grid;
+    border: 1px solid #E44154;
+    grid-template: 1fr / 1fr;
+    justify-items: center;
+    align-items: center;
+    img{
+      grid-area: 1/1/-1/-1;
+    }
+    &::before{
+      grid-area: 1/1/-1/-1;
+      transition: all .3s;
+      content: "more info";
+      display: grid;
+      grid-template-columns: 3rem;
+      text-align: center;
+      color: white;
+      align-content: center;
+      justify-content:center;
+      width: var(--w-circle);
+      height: var(--w-circle);
+      border-radius: var(--w-circle);
+    box-shadow: 0 0 0 1rem var(--primaryB);
+    background: var(--primaryA);
+    z-index: 1;
+    opacity: 0;
+    }
    h2, p{
      margin: 0;
     }
