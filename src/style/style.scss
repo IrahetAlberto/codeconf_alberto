@@ -62,8 +62,6 @@
        &:not(.speaker_card-active){
          .speaker_card{
           
-    
-   
                img, &::before{
                  grid-area: 1/1/-1/-1;
                }
@@ -109,10 +107,10 @@
     img{
       width: 100%;
     }
-    &.card_front{
-      display: grid;
-    grid-template-columns: 1fr 5rem;
-    @media (min-width:27rem) {
+    .card_front{
+     display: grid;
+     grid-template-columns: 1fr 5rem;
+      @media (min-width:12rem) {
       grid-template-columns: 1fr;
     }
     }

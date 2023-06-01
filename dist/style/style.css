@@ -313,12 +313,12 @@ nav a:last-child::before {
 .speaker_card__picture img {
   width: 100%;
 }
-.speaker_card__picture.card_front {
+.speaker_card__picture .card_front {
   display: grid;
   grid-template-columns: 1fr 5rem;
 }
-@media (min-width: 27rem) {
-  .speaker_card__picture.card_front {
+@media (min-width: 12rem) {
+  .speaker_card__picture .card_front {
     grid-template-columns: 1fr;
   }
 }
