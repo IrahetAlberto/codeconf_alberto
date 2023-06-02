@@ -2,7 +2,7 @@ const speakerCards = document.querySelectorAll('.speaker_card');
 
 speakerCards.forEach(card => {
   card.addEventListener('click', () => {
-    card.classList.toggle('active');
+    card.classList.toggle('speaker_card--active');
   });
 });
 

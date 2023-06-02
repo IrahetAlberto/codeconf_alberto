@@ -55,8 +55,7 @@
 .form_section textarea {
   width: 100%;
   padding: 0.5rem;
-  border-radius: 4px;
-  border: 1px solid #ccc;
+  border-bottom: 1 px solid black;
   transition: border-color 0.3s ease;
 }
 .form_section input[type=text]:focus,
@@ -171,10 +170,9 @@ nav a:last-child::before {
 }
 
 .teaser {
-  background-image: linear-gradient(to top, rgb(73, 5, 163), rgb(108, 33, 206)), linear-gradient(to bottom, rgb(73, 5, 163), rgb(108, 33, 206));
+  background: rgb(112, 90, 233);
+  background: linear-gradient(180deg, rgb(112, 90, 233) 0%, rgba(137, 137, 223, 0.9752494748) 48%, rgb(112, 90, 233) 100%);
   background-position: top, bottom;
-  background-repeat: no-repeat;
-  background-size: 100% 50%;
 }
 
 .teaser__header {
@@ -217,6 +215,90 @@ nav a:last-child::before {
   font-weight: 100;
 }
 
+.footer {
+  background: #383838;
+  color: white;
+  font-family: museo5;
+  padding-top: 6rem;
+}
+
+.get_ticket {
+  margin-left: 40rem;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-block-start: -8.5rem;
+  text-align: center;
+  background: orangered;
+  border-radius: 50px;
+  padding: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  gap: 1rem;
+  z-index: 1;
+}
+.get_ticket img {
+  max-width: 25px;
+  max-height: 25px;
+}
+.get_ticket__price {
+  position: absolute;
+  margin-block-start: 8.4rem;
+  background: grey;
+  color: wheat;
+  margin: none;
+  border-radius: 0px 0px 20px 20px;
+  z-index: 2;
+}
+
+.footerblock {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+}
+.footerblock h2 {
+  color: teal;
+}
+.footerblock .footer_content {
+  padding-right: 5rem;
+}
+
+.footer_sponsors {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer_contact {
+  display: flex;
+  border: solid white 1px;
+  padding: 1rem;
+  justify-content: space-around;
+}
+.footer_contact__social {
+  display: flex;
+  flex-direction: column;
+  border: solid 1px yellow;
+}
+.footer_contact__social ul {
+  display: flex;
+  list-style: none;
+  padding-right: 1rem;
+  gap: 2rem;
+}
+.footer_contact__social ul img {
+  width: 20PX;
+}
+.footer_contact__social h2 {
+  color: teal;
+}
+.footer_contact__rights {
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 1;
+}
+
 *,
 *::before,
 *::after {
@@ -225,17 +307,22 @@ nav a:last-child::before {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1::before {
+  font-family: icon;
+  content: "\e943";
+  margin-inline-end: 1rem;
+}
+
 .speaker_section {
-  border: 1px solid rgb(201, 140, 26);
+  border: 1px solid rgb(201, 90, 26);
   padding: 1rem;
   display: grid;
-  grid-row-gap: 7rem;
 }
-@media (min-width: 27rem) {
+@media (min-width: 450px) {
   .speaker_section {
     margin: 2rem;
-    grid-gap: 5rem;
-    max-width: 64rem;
+    grid-gap: 3rem;
+    width: 100%;
     margin: 0 auto;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   }
@@ -264,11 +351,12 @@ nav a:last-child::before {
     grid-gap: 1rem;
     align-content: space-between;
   }
-  .speaker_card:not(.speaker_card-active) .speaker_card img, .speaker_card:not(.speaker_card-active) .speaker_card::before {
+  .speaker_card:not(.speaker_card--active) .speaker_card img, .speaker_card:not(.speaker_card--active) .speaker_card::before {
     grid-area: 1/1/-1/-1;
   }
   .speaker_card:hover .speaker_card__picture::before {
     opacity: 1;
+    z-index: 1;
   }
 }
 
@@ -279,6 +367,7 @@ nav a:last-child::before {
   grid-template: 1fr/1fr;
   justify-items: center;
   align-items: center;
+  object-fit: cover;
 }
 .speaker_card__picture img {
   grid-area: 1/1/-1/-1;
@@ -302,10 +391,10 @@ nav a:last-child::before {
   opacity: 0;
 }
 
-.card_front {
+.card_front, strong {
+  display: grid;
   position: relative;
-  padding: 1rem;
-  text-align: center;
+  text-align: left;
   background-color: #fff;
 }
 
@@ -323,7 +412,6 @@ nav a:last-child::before {
 
 .speaker_card__picture {
   position: relative;
-  height: 200px;
   overflow: hidden;
 }
 
@@ -337,38 +425,26 @@ nav a:last-child::before {
   opacity: 1;
 }
 
-.speaker_card__circle-text {
-  color: #fff;
-  font-size: 1rem;
-}
-
 .card_back {
   padding: 1rem;
-  background-color: #fff;
+  background-color: #583f3f;
   display: none;
 }
 
-.speaker_card.active .card_back {
-  display: block;
-}
-
 .speaker_card__topic {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
   color: #333;
 }
 
 .speaker_card__text {
   margin-top: 0;
-  margin-bottom: 1rem;
+  padding: 0;
   color: #413434;
 }
 
 .speaker_footer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-top: 1rem;
+  align-items: flex-start;
 }
 
 .speaker_card__time {
@@ -387,4 +463,14 @@ nav a:last-child::before {
 
 .speaker__link:hover {
   color: #004499;
+}
+
+.speaker_card--active .speaker_card__location {
+  display: none;
+}
+.speaker_card--active .speaker_card__picture {
+  display: none;
+}
+.speaker_card--active .speaker_card__description {
+  display: grid;
 }/*# sourceMappingURL=style.css.map */

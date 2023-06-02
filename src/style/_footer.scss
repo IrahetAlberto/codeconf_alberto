@@ -1,0 +1,86 @@
+.footer{
+  background: #383838;
+  color: white;
+  font-family: museo5;
+  padding-top: 6rem;
+}
+  .get_ticket{
+    margin-left: 40rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-block-start: -8.5rem;
+    text-align: center;
+    background: orangered;
+    border-radius: 50px;
+    padding: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    gap: 1rem;
+    z-index: 1;
+    img{
+      max-width: 25px;
+      max-height: 25px;
+    }
+    &__price{
+      position: absolute;
+      margin-block-start: 8.4rem;
+      background: grey;
+      color: wheat;
+      margin: none;
+      border-radius: 0px 0px 20px 20px; 
+      z-index: 2;
+    }
+  }
+
+
+.footerblock{
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  h2{
+    color: teal;
+    
+  }
+  .footer_content{
+    padding-right: 5rem;
+  }
+}
+
+.footer_sponsors{
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer_contact{
+  display: flex;
+  border: solid white 1px;
+  padding: 1rem;
+  justify-content: space-around;
+  &__social{
+    display: flex;
+    flex-direction: column;
+    border: solid 1px yellow;
+    ul{
+      display: flex;
+      list-style: none;
+      padding-right:  1rem;
+      gap: 2rem;
+      img{
+        width: 20PX;
+      }
+    }
+    h2{
+      color: teal;
+    }
+  }
+  &__rights{
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+    
+  }
+}
+

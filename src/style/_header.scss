@@ -41,10 +41,10 @@ nav a:last-child {
 
 .teaser{
   
-  background-image: linear-gradient(to top, rgb(73, 5, 163), rgb(108, 33, 206)), linear-gradient(to bottom,rgb(73, 5, 163), rgb(108, 33, 206));
+  background: rgb(112,90,233);
+background: linear-gradient(180deg, rgba(112,90,233,1) 0%, rgba(137,137,223,0.975249474789916) 48%, rgba(112,90,233,1) 100%);
   background-position: top, bottom;
-  background-repeat: no-repeat;
-  background-size: 100% 50%; 
+  
 }
 .teaser__header {
   display: grid;
