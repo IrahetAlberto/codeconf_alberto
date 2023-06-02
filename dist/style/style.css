@@ -329,6 +329,8 @@ h1::before {
 }
 
 .speaker_card {
+  display: grid;
+  grid-template-columns: 1fr;
   background-color: aqua;
   font-family: "museo", serif;
   padding: 1rem;

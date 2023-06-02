@@ -50,7 +50,8 @@ h1::before{
 }
 
 .speaker_card {
-  
+display: grid;  
+grid-template-columns: 1fr;
 background-color: aqua;
 //border: solid 1px black;
 font-family: 'museo', serif;
