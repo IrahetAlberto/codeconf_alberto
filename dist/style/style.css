@@ -307,6 +307,11 @@ nav a:last-child::before {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1 {
+  margin: auto;
+  padding: 1rem 15rem;
+}
+
 h1::before {
   font-family: icon;
   content: "\e943";
@@ -314,35 +319,35 @@ h1::before {
 }
 
 .speaker_section {
-  border: 1px solid rgb(201, 90, 26);
-  padding: 1rem;
   display: grid;
+  background-color: #e4e4e4;
 }
-@media (min-width: 450px) {
+@media (min-width: 27rem) {
   .speaker_section {
-    margin: 2rem;
+    margin: 0 auto;
+    max-width: 74rem;
     grid-gap: 3rem;
     width: 100%;
     margin: 0 auto;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    padding: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
   }
 }
 
 .speaker_card {
-  --primary: #E44154;
-  --primaryA: #E44154DD;
-  --primaryB: #E4415488;
-  --primaryC: #E4415411;
-  --w-circle: 50%;
   background-color: aqua;
-  border: solid 1px black;
-  font-family: "maven", serif;
+  font-family: "museo", serif;
   padding: 1rem;
-  color: rgba(0, 0, 0, 0.8666666667);
+  color: rgba(56, 33, 106, 0.867);
   border-radius: 0.5rem;
 }
 @media (min-width: 27rem) {
   .speaker_card {
+    --primary: #E44154;
+    --primaryA: #E44154DD;
+    --primaryB: #E4415488;
+    --primaryC: #E4415411;
+    --w-circle: 50%;
     box-shadow: none;
     background: transparent;
     min-height: 16rem;
@@ -363,7 +368,6 @@ h1::before {
 .speaker_card__picture {
   width: 100%;
   display: grid;
-  border: 1px solid #E44154;
   grid-template: 1fr/1fr;
   justify-items: center;
   align-items: center;
@@ -395,18 +399,22 @@ h1::before {
   display: grid;
   position: relative;
   text-align: left;
-  background-color: #fff;
+  background-color: #e4e4e4;
 }
 
 .speaker_card__name {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
 }
 
 .speaker_card__location {
+  font-family: maven;
   margin-top: 0;
   margin-bottom: 1rem;
+  padding-left: 1rem;
   color: #888;
 }
 
@@ -427,7 +435,7 @@ h1::before {
 
 .card_back {
   padding: 1rem;
-  background-color: #583f3f;
+  background-color: #f4eae1;
   display: none;
 }
 
@@ -444,7 +452,8 @@ h1::before {
 .speaker_footer {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+  padding-inline: 2rem;
 }
 
 .speaker_card__time {
@@ -454,10 +463,18 @@ h1::before {
 .speaker_card__room {
   font-weight: bold;
 }
+.speaker_card__room::before {
+  font-family: icon;
+  content: "|";
+  margin-inline-end: 1rem;
+}
 
 .speaker__link {
-  color: #0066cc;
+  color: orangered;
   text-decoration: none;
+  border: solid orangered 1px;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
   transition: color 0.3s ease;
 }
 
@@ -465,6 +482,9 @@ h1::before {
   color: #004499;
 }
 
+.speaker_card--active {
+  background-color: #f4eae1;
+}
 .speaker_card--active .speaker_card__location {
   display: none;
 }
@@ -473,4 +493,17 @@ h1::before {
 }
 .speaker_card--active .speaker_card__description {
   display: grid;
+  padding: 1rem;
+  font-family: maven;
+}
+.speaker_card--active .speaker_card__name {
+  display: flex;
+  font-size: 3rem;
+  padding-left: 1rem;
+  padding-top: 2rem;
+  margin-bottom: 0;
+  background-color: #f4eae1;
+}
+.speaker_card--active .speaker_card__name strong {
+  background-color: #f4eae1;
 }/*# sourceMappingURL=style.css.map */
